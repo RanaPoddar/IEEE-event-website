@@ -26,13 +26,13 @@ export default function Navbar() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"
       }`}
     >
-      <Link href="#home" className="hover:text-IEEEBlue transition font-poppins">
+      <Link href="/" className="hover:text-IEEEBlue transition font-poppins">
         Home
       </Link>
-      <Link href="#schedule" className="hover:text-IEEEBlue transition font-poppins">
+      <Link href="/schedule" className="hover:text-IEEEBlue transition font-poppins">
         Schedule
       </Link>
-      <Link href="#contact" className="hover:text-IEEEBlue transition font-poppins">
+      <Link href="/contact" className="hover:text-IEEEBlue transition font-poppins">
         Contact
       </Link>
     </nav>
