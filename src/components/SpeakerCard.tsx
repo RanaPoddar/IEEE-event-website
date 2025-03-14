@@ -21,7 +21,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ image, name, details }) => {
       {/* <img className="w-full h-48 object-cover rounded-full mx-auto" src={image} alt={name} /> */}
       <div className="w-full flex justify-center">
     <Avatar className='h-40 w-40'>
-    <AvatarImage src="https://github.com/shadcn.png" />
+    <AvatarImage src={image} />
     <AvatarFallback>CN</AvatarFallback>
     </Avatar>
     </div>

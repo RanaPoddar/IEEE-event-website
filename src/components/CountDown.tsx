@@ -49,7 +49,7 @@ const CountDown: React.FC<CountDownProps> = ({ targetDate }) => {
 
   return (
     <div className="flex justify-center items-center gap-2">
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+      {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
     </div>
   );
 };
