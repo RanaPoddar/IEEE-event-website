@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 // Fonts 
 import { Montserrat } from "next/font/google";
+import Link from 'next/link';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -47,28 +48,28 @@ const NavbarExp = () => {
         {/* Right: Navigation Links */}
         <ul className={`${montserrat.className} hidden md:flex space-x-6 text-sm font-medium font-OpenSans`}>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#about">About</a>
+            <Link href="#about">About</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="/events">Events</a>
+            <Link href="/events">Events</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#registration">Registration</a>
+            <Link href="#registration">Registration</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#speakers">Speakers</a>
+            <Link href="#speakers">Speakers</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#schedule">Schedule</a>
+            <Link href="#schedule">Schedule</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#gallery">Gallery</a>
+            <Link href="#gallery">Gallery</Link>
             </li>
             <li className="hover:text-[#fac42b] cursor-pointer">
-            <a href="#contact">Contact</a>
+            <Link href="#contact">Contact</Link>
             </li>
         </ul>
 
