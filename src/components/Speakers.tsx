@@ -1,29 +1,54 @@
 import SpeakerCard from "./SpeakerCard";
+// Fonts 
+import { Montserrat } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Merriweather, Poppins } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+})
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+
 const speakers = [
     {
         image: "https://picsum.photos/200?1",
-        name: "Dr. John Doe",
-        details: "Expert in AI and Machine Learning"
+        name: "Prof. Ponnurangam Kumaraguru",
+        details: "Natural Language Processing (NLP), Applied Machine Learning, Responsible AI, Social Computing"
     },
     {
         image: "https://picsum.photos/200?2",
-        name: "Dr. Jane Smith",
-        details: "Specialist in Cybersecurity"
+        name: "Dr. Krithika Ramaswamy",
+        details: "Graph Theory and Algorithms, Research Area: Parameterized Algorithms, Research Area: Approximation Algorithms"
     },
     {
         image: "https://picsum.photos/200?3",
-        name: "Dr. Emily Johnson",
-        details: "Renowned Data Scientist"
+        name: "Dr. Ebin Deni Raj",
+        details: "Responsible AI,Explainable Machine Learning, AI for Social Good, Fairness, Accountability and Transparency in AI, Social Computing"
     },
     {
         image: "https://picsum.photos/200?4",
         name: "Dr. Michael Brown",
-        details: "Pioneer in Quantum Computing"
+        details: "NLP, Bioinformatics, Machine Learning"
     },
     {
         image: "https://picsum.photos/200?5",
         name: "Dr. Sarah Davis",
-        details: "Leader in Blockchain Technology"
+        details: "Weighted graph theory, Interval Functions, Transit Functions, Median graphs"
     },
     {
         image: "https://picsum.photos/200?6",
@@ -35,12 +60,16 @@ const speakers = [
 export default function Speakers() {
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div className="bg-[#f5f5f5] py-4 mt-15">
+        <div id="speakers" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+
+            <div className="">
            <div className="w-full flex justify-center">
-           <h2 className="text-IEEEBlue font-MerriWeather font-bold text-3xl uppercase">Speakers</h2>
+           <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase`}>Speakers</h2>
            </div>
 
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-16">
+           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-16">
             {speakers.map((speaker, index) => (
                 <SpeakerCard key={index} 
             image={speaker.image}
@@ -50,6 +79,9 @@ export default function Speakers() {
             ))}
              
            </div>
+           </div>
+
+        </div>
         </div>
     )
 }

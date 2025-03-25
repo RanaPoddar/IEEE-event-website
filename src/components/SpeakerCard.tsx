@@ -4,6 +4,31 @@ import { motion } from 'framer-motion';
 // import { Card, CardContent, CardHeader, CardTitle, } from './ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
+// Fonts 
+import { Montserrat } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Merriweather, Poppins } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+})
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+
 
 interface SpeakerCardProps {
   image: string;
@@ -14,7 +39,7 @@ interface SpeakerCardProps {
 const SpeakerCard: React.FC<SpeakerCardProps> = ({ image, name, details }) => {
   return (
     <motion.div
-      className="group max-w-sm rounded overflow-hidden shadow-lg p-4 bg-softWhite"
+      className="group max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -26,8 +51,11 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ image, name, details }) => {
     </Avatar>
     </div>
       <div className="px-6 py-4 text-center">
-        <div className="font-bold text-xl mb-2 font-MerriWeather text-elegantOrange">{name}</div>
-        <p className="text-gray-400 group:hover:text-green-800: text-base">{details}</p>
+        <div className={`${merriweather.className} font-bold text-sm md:text-lg mb-2 font-MerriWeather text-headingColor`}>{name}</div>
+        <div className="flex justify-center">
+        <div className="w-16 h-1 bg-customYellow rounded-full mb-2"/>
+        </div>
+        <p className={`${poppins.className} text-gray-400 group:hover:text-green-800: text-sm`}>{details}</p>
       </div>
     </motion.div>
 

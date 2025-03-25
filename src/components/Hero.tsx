@@ -23,7 +23,7 @@ export default function HeroSection() {
         animate={floatAnimation}
       />
       <motion.div
-        className="absolute bottom-20 right-20 w-24 h-24 bg-elegantOrange rounded-full opacity-30"
+        className="absolute bottom-20 right-20 w-24 h-24 bg-customYellow rounded-full opacity-30"
         animate={floatAnimation}
       />
       <motion.div

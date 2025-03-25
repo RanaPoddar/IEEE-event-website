@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @import "tailwindcss";
 
+
 @theme {
-  --font-poppins: "Poppins", sans-serif; 
-  --font-MerriWeather : "Merriweather", serif;
+  --font-Poppins: "Poppins", sans-serif; 
+  --font-MonsterRat: "Montserrat", sans-serif;
+  --font-Playfair: "Playfair Display", serif;
+  --font-Winky: "Winky Sans", sans-serif;
 
   --color-IEEEBlue: #0057B8; 
   --color-elegantOrange: #F4A261;
   --color-softWhite: #F9FAFC;
   --color-lightGray: #E9ECFF;
   --color-darkGray: #333333;
+  --color-headingColor: #262626;
+  --color-customYellow: #fac42b;
 }
 
 :root {
@@ -131,4 +134,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 2s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
 }

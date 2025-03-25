@@ -1,3 +1,29 @@
+// Fonts 
+import { Montserrat } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Merriweather, Poppins } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+});
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+})
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+
+
 const Schedule = () => {
     const schedule = [
       { time: '9:00 – 9:45', theme: 'Registration', speaker: '' },
@@ -17,7 +43,7 @@ const Schedule = () => {
     return (
       <section className="py-16 bg-white text-darkGray">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center text-IEEEBlue underline decoration-sky-500 uppercase font-MerriWeather">Workshop Schedule</h2>
+          <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase text-center`}>Events Schedule</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse border border-gray-300">
               <thead>
