@@ -1,28 +1,28 @@
 import SpeakerCard from "./SpeakerCard";
 // Fonts 
 import { Montserrat } from "next/font/google";
-import { Playfair_Display } from "next/font/google";
-import { Merriweather, Poppins } from "next/font/google";
+// import { Playfair_Display } from "next/font/google";
+// import { Merriweather, Poppins } from "next/font/google";
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700', '800'],
   display: 'swap',
 });
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700', '800'],
-  display: 'swap',
-})
-const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  display: 'swap',
-})
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '700', '800'],
-  display: 'swap',
-})
+// const playfair = Playfair_Display({
+//   subsets: ['latin'],
+//   weight: ['400', '700', '800'],
+//   display: 'swap',
+// })
+// const merriweather = Merriweather({
+//   subsets: ['latin'],
+//   weight: ['400', '700', '900'],
+//   display: 'swap',
+// })
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: ['400', '700', '800'],
+//   display: 'swap',
+// })
 
 const speakers = [
     {
