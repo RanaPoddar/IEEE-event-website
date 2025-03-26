@@ -33,12 +33,12 @@ export default function Dates() {
                 <h1 className={`${merriweather.className} text-2xl font-semibold text-white`}>Workshop Date</h1>
 
                 <div className="w-full flex-col justify-start mt-2">
-                <h1 className={`${montserrat.className} text-4xl font-bold text-customYellow`}>April 25, 2025</h1>
+                <h1 className={`${montserrat.className} text-4xl font-bold text-customYellow`}>May 3, 2025</h1>
                 <h6 className={`${merriweather.className} text-lg font-normal text-white mt-2`}>Event in: </h6>
                 </div>
                 {/* CountDown div */}
                 <div className="">
-                    <CountDown targetDate="2025-04-25T00:00:00" />
+                    <CountDown targetDate="2025-05-31T00:00:00" />
                 </div>
             </div>
 
@@ -48,12 +48,12 @@ export default function Dates() {
                 <h1 className={`${merriweather.className} text-2xl font-semibold text-white`}>Registration Deadline</h1>
 
                 <div className="w-full flex-col justify-start mt-2">
-                <h1 className={`${montserrat.className} text-4xl font-bold text-customYellow `}>April 10, 2025</h1>
+                <h1 className={`${montserrat.className} text-4xl font-bold text-customYellow `}>April 25, 2025</h1>
                 <h6 className={`${merriweather.className} text-lg font-normal text-white mt-2`}>Registration closes in: </h6>
                 </div>
                 {/* CountDown div */}
                 <div className="">
-                    <CountDown targetDate="2025-04-10T00:00:00" />
+                    <CountDown targetDate="2025-04-25T00:00:00" />
                 </div>
             </div>
 

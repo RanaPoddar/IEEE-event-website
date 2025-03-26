@@ -28,7 +28,7 @@ const LowerHero = () => {
       {/* Join Workshop Section */}
       <div className=" h-full flex items-center flex-col text-black px-6 py-2">
         <div className={`${montserrat.className} text-4xl text-white font-bold`}>Join the Workshop</div>
-        <div className={`${merriweather.className} text-sm font-[300] flex justify-end text-white`}>at Auditorium, NIAMT Ranchi</div>
+        <div className={`${merriweather.className} text-sm font-[300] flex justify-end text-white`}>on 3rd May - at Auditorium, NIAMT Ranchi</div>
       </div>
 
 
@@ -43,12 +43,12 @@ const LowerHero = () => {
       {/* Join Workshop Section */}
       <div className=" h-full flex items-center flex-col text-black px-6 py-2">
         <div className={`${montserrat.className} text-2xl text-black font-bold`}>Join the Workshop</div>
-        <div className={`${merriweather.className} text-sm font-[300] flex justify-end text-black`}>at Auditorium, NIAMT Ranchi</div>
+        <div className={`${merriweather.className} text-sm font-[300] flex justify-end text-black`}>on 3rd May - at Auditorium, NIAMT Ranchi</div>
       </div>
 
       {/* Event Timer */}
       <div className="flex items-center w-full justify-center mt-2 px-4 h-full">
-        <CountDown targetDate="2025-12-31T23:59:59" />
+        <CountDown targetDate="2025-05-03T23:59:59" />
       </div>
     </div>
     </>

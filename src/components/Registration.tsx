@@ -25,9 +25,20 @@ export default function Registration() {
             </div>
             
                 <div className=" flex justify-center items-center">
-                <div className="flex justify-start w-full pt-5">
-                    <p className={`${merriweather.className} text-darkGray text-sm md:text-lg font-medium`}>
-                    We invite undergraduate students in their pre-final / final years and postgraduate students from computer science and mathematics to apply for participation in the workshop. Interested participants can register using the link below. The registration covers lunch, snacks and certificates. Accommodation will not be provided.                    </p>
+                <div className=" w-full pt-5">
+                    <p className={`${merriweather.className} text-darkGray text-sm md:text-lg font-[400] test-justify`}>
+                        We invite undergraduate students in their pre-final / final years and postgraduate students from computer science and mathematics to apply for participation in the workshop. Interested participants can register using the link below. The registration covers lunch, snacks and certificates. Accommodation will not be provided.
+                    </p>
+                    <p className={`${merriweather.className} text-darkGray text-sm md:text-lg font-medium test-justify`}>
+                        Registration covers lunch, snacks and a participation certificate. The steps of the registration process are as follows:
+                    </p>
+                    <ol className={`${merriweather.className} text-darkGray text-sm md:text-lg font-medium list-decimal pl-5 mt-4`}>
+                        <li>Go to the registration link below.</li>
+                        <li>Select the number of registrations you want (maximum: 5).</li>
+                        <li>Enter your basic details as a "buyer" of registrations.</li>
+                        <li>Enter the details of each registrant you are registering for.</li>
+                        <li>Pay using any of the listed options.</li>
+                        </ol>
                 </div>
                 </div>
 
