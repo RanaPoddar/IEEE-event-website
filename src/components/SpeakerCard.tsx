@@ -51,9 +51,9 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ image, name, details }) => {
     </Avatar>
     </div>
       <div className="px-6 py-4 text-center">
-        <div className={`${merriweather.className} font-bold text-sm md:text-lg mb-2 font-MerriWeather text-headingColor`}>{name}</div>
+        <div className={`${merriweather.className} font-bold text-sm md:text-lg mb-1 font-MerriWeather text-headingColor`}>{name}</div>
         <div className="flex justify-center">
-        <div className="w-16 h-1 bg-customYellow rounded-full mb-2"/>
+        <div className="w-16 h-[2px] bg-customYellow rounded-full mb-2"/>
         </div>
         <p className={`${poppins.className} text-gray-400 group:hover:text-green-800: text-sm`}>{details}</p>
       </div>

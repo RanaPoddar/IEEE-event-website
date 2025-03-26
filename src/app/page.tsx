@@ -11,11 +11,14 @@ import Registration from "@/components/Registration";
 import RegistrationStatus from "@/components/RegistrationStatus";
 import Schedule from "@/components/Schedule";
 import Speakers from "@/components/Speakers";
+import ScrollToTopWrapper from "@/components/Wrappers/ScrollToTop";
 
-const Home = () => {
+async function Home () {
+
+  await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a 2-second delay
 
   return (
-    <>
+    <ScrollToTopWrapper>
     <div className="">
     <div className="z-100"><NavbarExp/></div>
     <div className="z-0"><HeroExp/>
@@ -36,7 +39,7 @@ const Home = () => {
       <ContactVenue/>
       <Footer/>    
     </div>
-    </>
+    </ScrollToTopWrapper>
     
   );
 }

@@ -65,8 +65,9 @@ export default function Speakers() {
             
 
             <div className="">
-           <div className="w-full flex justify-center">
+           <div className="w-full flex flex-col items-center justify-center">
            <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase`}>Speakers</h2>
+           <div className="relative mt-1 w-30 h-1 bg-customYellow rounded-full"></div>
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-16">

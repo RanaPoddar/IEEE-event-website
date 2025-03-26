@@ -23,8 +23,10 @@ export default function About() {
 
     return (
         <div id="about" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-10">
-            <div className="flex justify-center w-full">
+            <div className="flex justify-center flex-col items-center w-full">
                 <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase`}>about</h2>
+                <div className="relative mt-1 w-20 h-1 bg-customYellow rounded-full"></div>
+                
             </div>
             {/* About the Event */}
             <div className="flex w-full pt-5 justify-start">

@@ -2,6 +2,7 @@
 import { Montserrat } from "next/font/google";
 // import { Playfair_Display } from "next/font/google";
 // import { Merriweather, Poppins } from "next/font/google";
+import {Poppins} from "next/font/google";
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700', '800'],
@@ -17,11 +18,11 @@ const montserrat = Montserrat({
 //   weight: ['400', '700', '900'],
 //   display: 'swap',
 // })
-// const poppins = Poppins({
-//   subsets: ['latin'],
-//   weight: ['400', '700', '800'],
-//   display: 'swap',
-// })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
 
 
 const Schedule = () => {
@@ -41,11 +42,16 @@ const Schedule = () => {
     ];
   
     return (
-      <section className="py-16 bg-white text-darkGray">
+      <section id="schedule" className="py-16 bg-white text-darkGray">
         <div className="max-w-5xl mx-auto px-6">
+          
+        <div className="flex justify-center flex-col items-center w-full pb-5">
           <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase text-center`}>Events Schedule</h2>
+          <div className="relative mt-1 w-40 h-1 bg-customYellow rounded-full"></div>
+        </div>
+
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse border border-gray-300">
+            <table className={`${poppins.className} w-full text-left border-collapse border border-gray-300`}>
               <thead>
                 <tr className="bg-gray-100">
                   <th className="border border-gray-300 p-4 font-semibold">Time</th>

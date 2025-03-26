@@ -1,69 +1,50 @@
 'use client'
 
 import axios from "axios";
+import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Merriweather } from "next/font/google";
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+});
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  display: 'swap',
+})
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+})
 
 const ContactVenue = () => {
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.target as HTMLFormElement);
-        const data = Object.fromEntries(formData);
     
-        try {
-          const response = await axios.post('/api/contact', data, {
-            headers: { 'Content-Type': 'application/json' },
-          });
-    
-          if (response.status === 200) {
-            alert('Message sent successfully!');
-            (e.target as HTMLFormElement).reset();
-          } else {
-            alert('Failed to send message. Please try again later.');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('An error occurred.');
-        }
-      };
-
-
     return (
       <section className="py-16 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
           {/* Contact Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 font-MerriWeather uppercase text-IEEEBlue">Contact Us</h2>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label className="block text-sm font-medium">Name</label>
-                <input 
-                  name="name" 
-                  type="text" 
-                  className="w-full p-3 border border-IEEEBlue/70 rounded-lg focus:border-IEEEBlue focus:ring-IEEEBlue" 
-                  placeholder="Your Name" 
-                  required 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Email</label>
-                <input name="email" type="email" className="w-full p-3 border border-IEEEBlue/70 rounded-lg" placeholder="Your Email" required />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Message</label>
-                <textarea name="message" className="w-full p-3 border border-IEEEBlue/70 rounded-lg" rows={4} placeholder="Your Message" required></textarea>              
-                </div>
-             
-                <button
-className="mt-8 px-4 py-1 text-lg font-medium cursor-pointer text-IEEEBlue bg-white border-2 border-IEEEBlue rounded-2xl shadow-lg hover:text-white hover:bg-IEEEBlue  transition"
->
-Send Message
-</button>
-            </form>
+            <h2 className={`${montserrat.className} text-3xl font-bold mb-6 uppercase text-[#262626]`}>Contact Us</h2>
+            <div>
+              <p className={`${merriweather.className} text-lg font-semibold`}>Prof. Rahul Mishra</p>
+              <p>Email: <a href="mailto:johndoe@example.com" className={`${poppins.className} text-IEEEBlue`}>rahulmishra@example.com</a></p>
+              <p>Phone: <a href="tel:+1234567890" className={`${poppins.className} text-IEEEBlue`}>+1 234 567 890</a></p>
+
+              <div className="mt-6"></div>
+
+              <p className={`${merriweather.className} text-lg font-semibold`}>Prof. Shalini Mahato</p>
+              <p>Email: <a href="mailto:janesmith@example.com" className={`${poppins.className} text-IEEEBlue`}>smahato@example.com</a></p>
+              <p>Phone: <a href="tel:+0987654321" className={`${poppins.className} text-IEEEBlue`}>+0 987 654 321</a></p>
+            </div>
           </div>
   
           {/* Venue Section */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 font-MerriWeather uppercase text-IEEEBlue">Venue</h2>
-            <p className="text-lg">Auditoriom, National Institute of Advanced Manufacturing Technology (Formerly NIFFT)</p>
+            <h2 className={`${montserrat.className} text-3xl font-bold mb-6 uppercase text-[#262626]`}>Venue</h2>
+            <p className="text-lg">Auditorium, National Institute of Advanced Manufacturing Technology (Formerly NIFFT)</p>
             <p className="text-gray-600 mt-4">Khunti - Chaibasa Rd, NIFFT Colony, Hatia, Ranchi, Jharkhand 834003</p>
             <div className="mt-6">
               <iframe

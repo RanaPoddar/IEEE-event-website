@@ -76,7 +76,7 @@ export default function HeroSection() {
         onClick={nextSlide}
         whileHover={{ scale: 1.2, x: -10 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-full z-20"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 cursor-pointer rounded-full z-20"
       >
         <MdArrowForwardIos className="cursor-pointer"/>
       </motion.button>

@@ -19,8 +19,9 @@ export default function Registration() {
 
     return (
         <div id="registration" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-            <div className="flex justify-center w-full">
+            <div className="flex justify-center flex-col items-center w-full">
                 <h2 className={`${montserrat.className} text-headingColor font-bold text-3xl uppercase`}>registration</h2>
+                <div className="relative mt-1 w-40 h-1 bg-customYellow rounded-full"></div>
             </div>
             
                 <div className=" flex justify-center items-center">
@@ -32,7 +33,7 @@ export default function Registration() {
 
         <div className="w-full flex justify-start ">
 <button
-className="mt-8 px-4 py-1 text-lg font-medium cursor-pointer text-customYellow bg-white border-2 border-customYellow rounded-2xl shadow-lg hover:text-white hover:bg-customYellow  transition"
+className="mt-4 px-4 py-1 text-lg font-medium cursor-pointer text-customYellow bg-white border-2 border-customYellow rounded-2xl shadow-lg hover:text-white hover:bg-customYellow  transition"
 >
 REGISTER NOW
 </button>
