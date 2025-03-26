@@ -35,7 +35,7 @@ export default function Registration() {
                     <ol className={`${merriweather.className} text-darkGray text-sm md:text-lg font-medium list-decimal pl-5 mt-4`}>
                         <li>Go to the registration link below.</li>
                         <li>Select the number of registrations you want (maximum: 5).</li>
-                        <li>Enter your basic details as a "buyer" of registrations.</li>
+                        <li>Enter your basic details as a buyer of registrations.</li>
                         <li>Enter the details of each registrant you are registering for.</li>
                         <li>Pay using any of the listed options.</li>
                         </ol>
