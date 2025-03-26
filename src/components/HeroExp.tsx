@@ -43,9 +43,9 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-black">
       <div className="absolute inset-0 flex">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           <motion.div
             key={index}
             initial={{ y: direction === 1 ? "100%" : "-100%", opacity: 1 }}

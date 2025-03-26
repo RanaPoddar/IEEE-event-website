@@ -1,6 +1,5 @@
 'use client'
 
-import axios from "axios";
 import { Montserrat } from "next/font/google";
 import { Poppins } from "next/font/google";
 import { Merriweather } from "next/font/google";
