@@ -35,6 +35,7 @@ const NavbarExp = () => {
   };
 
   return (
+    <>
     <nav
       className={`bg-[#262626] text-white px-6 py-1 shadow-md z-50 fixed top-0 left-0 w-full transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
@@ -101,7 +102,9 @@ const NavbarExp = () => {
         </div>
       </div>
 
-{/* side nav bar for mobile devices */}
+
+    </nav>
+    {/* side nav bar for mobile devices */}
 {/* Side Nav Bar for Mobile Devices */}
 <div className="md:hidden bg-[#262626]">
   <div className={`z-50 fixed top-0 right-0 h-screen w-64 bg-[#262626] text-white shadow-lg transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
@@ -155,7 +158,7 @@ const NavbarExp = () => {
     
   </div>
 </div>
-    </nav>
+</>
   );
 };
 
