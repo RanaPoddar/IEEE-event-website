@@ -38,7 +38,7 @@ export default function Dates() {
                 </div>
                 {/* CountDown div */}
                 <div className="">
-                    <CountDown targetDate="2025-05-31T00:00:00" />
+                    <CountDown targetDate="2025-05-03T00:00:00" />
                 </div>
             </div>
 

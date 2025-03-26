@@ -70,7 +70,7 @@ export default function Speakers() {
            <div className="relative mt-1 w-30 h-1 bg-customYellow rounded-full"></div>
            </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-10 mt-16">
+           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-10 mt-10">
             {speakers.map((speaker, index) => (
                 <SpeakerCard key={index} 
             image={speaker.image}

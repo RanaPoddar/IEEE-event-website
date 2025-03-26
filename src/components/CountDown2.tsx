@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 
-
-// Fonts 
+// Fonts
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -28,14 +27,14 @@ const CountDown: React.FC<CountDownProps> = ({ targetDate }) => {
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+  
+      return () => clearTimeout(timer);
+    });
+    
   return (
     <div className="flex justify-center items-center gap-1">
       {Object.entries(timeLeft).map(([unit, value]) => (

@@ -34,7 +34,7 @@ const LowerHero = () => {
 
       {/* Event Timer */}
       <div className="flex items-center px-4 h-full bg-customYellow">
-        <CountDown targetDate="2025-12-31T23:59:59" />
+        <CountDown targetDate="2025-05-03T23:59:59" />
       </div>
     </div>
 
