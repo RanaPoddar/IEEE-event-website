@@ -28,6 +28,12 @@ const NavbarExp = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <nav
       className={`bg-[#262626] text-white px-6 py-1 shadow-md z-50 fixed top-0 left-0 w-full transition-transform duration-300 ${
@@ -75,7 +81,8 @@ const NavbarExp = () => {
 
         {/* Mobile Menu (Hamburger Icon) */}
         <div className="md:hidden">
-          <button className="text-white focus:outline-none">
+          <button className="text-white focus:outline-none cursor-pointer"
+          onClick={() => handleMenuToggle()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -93,6 +100,61 @@ const NavbarExp = () => {
           </button>
         </div>
       </div>
+
+{/* side nav bar for mobile devices */}
+{/* Side Nav Bar for Mobile Devices */}
+<div className="md:hidden bg-[#262626]">
+  <div className={`z-50 fixed top-0 right-0 h-screen w-64 bg-[#262626] text-white shadow-lg transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+    <button
+  className="absolute top-4 right-4 text-white focus:outline-none cursor-pointer"
+  onClick={() => handleMenuToggle()}
+    >
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+    </button>
+  <div className="">
+  <ul className={`${montserrat.className} mt-16 space-y-4 px-6 text-sm font-medium`}>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="/">Home</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#about">About</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="/events">Events</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#registration">Registration</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#speakers">Speakers</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#schedule">Schedule</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#gallery">Gallery</Link>
+  </li>
+  <li className="hover:text-[#fac42b] cursor-pointer">
+    <Link href="#contact">Contact</Link>
+  </li>
+    </ul>
+  </div>
+    
+  </div>
+</div>
     </nav>
   );
 };
